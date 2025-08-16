@@ -1,0 +1,152 @@
+[diego12level.html](https://github.com/user-attachments/files/21817407/diego12level.html)
+<!DOCTYPE html>
+<html lang="la">
+<head>
+  <meta charset="UTF-8" />
+  <title>Codex Amoris</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    .box {
+      background: white;
+      border: 2px solid #444;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 8px;
+      max-width: 450px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    button {
+      margin: 10px 10px 0 0;
+      padding: 8px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      color: white;
+    }
+    .yes-btn { background-color: #28a745; }
+    .no-btn { background-color: #dc3545; }
+    .open-btn { background-color: #007bff; }
+    img {
+      max-width: 100%;
+      margin-top: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box" id="questionBox">
+    <p><strong>Codexamoris:</strong> solum tu claves habes: visne eum aperire?</p>
+    <button class="yes-btn" onclick="answerYes()">Ita</button>
+    <button class="no-btn" onclick="answerNo()">Minime</button>
+  </div>
+
+  <script>
+    function clearBox() {
+      document.getElementById('questionBox').innerHTML = '';
+    }
+
+    function answerYes() {
+      clearBox();
+      const box = document.getElementById('questionBox');
+      box.innerHTML = `
+        <p><strong>Gratias ago!</strong> Quod mecum lusisti. ✨<br>
+        Si missionem perfici vis, sequere gradus…</p>
+        <a href="https://www-einfachganzleben-de.translate.goog/leben-balance/5-sprachen-der-liebe-test?utm_source=chatgpt.com&_x_tr_sl=de&_x_tr_tl=fr&_x_tr_hl=de&_x_tr_pto=wapp" target="_blank">
+          <button class="open-btn">Ad primum test</button>
+        </a>
+        <p>Esne iam perfecisti?</p>
+        <button class="yes-btn" onclick="secondTest()">Ita</button>
+      `;
+    }
+
+    function secondTest() {
+      clearBox();
+      const box = document.getElementById('questionBox');
+      box.innerHTML = `
+        <p>Bene! Sed adhuc alter test manet 😏</p>
+        <a href="https://www-wielandstolzenburg-de.translate.goog/5-sprachen-der-liebe-test/?_x_tr_sl=de&_x_tr_tl=fr&_x_tr_hl=de&_x_tr_pto=wapp" target="_blank">
+          <button class="open-btn">Ad secundum test</button>
+        </a>
+        <p>Esne iam perfecisti?</p>
+        <button class="yes-btn" onclick="finalStep()">Ita</button>
+        <button class="no-btn" onclick="reminder()">Minime</button>
+      `;
+    }
+
+    function reminder() {
+      clearBox();
+      const box = document.getElementById('questionBox');
+      box.innerHTML = `
+        <p>Haha, te iam paulum vexat? 😅<br>
+        Sed oportet ut mihi eventum dicas!</p>
+        <p>Dixistine mihi iam eventum?</p>
+        <button class="yes-btn" onclick="finalStep()">Ita</button>
+        <button class="no-btn" onclick="askAgain()">Minime</button>
+      `;
+    }
+
+    function askAgain() {
+      clearBox();
+      const box = document.getElementById('questionBox');
+      box.innerHTML = `
+        <p>Oportet ut mihi dicas eventum 💌</p>
+      `;
+    }
+
+    function finalStep() {
+      clearBox();
+      const box = document.getElementById('questionBox');
+      box.innerHTML = `
+        <p><strong>Mission completa!</strong><br>
+        Omnia perficisti 🎉<br>
+        Exspecto adhuc tuam responsionem de codice doni quod optasti 😉</p>
+        <button class="open-btn" onclick="askGift()">Quid optasti?</button>
+        <button class="yes-btn" onclick="showFunny()">Visne aliquid sexy videre? 😏</button>
+      `;
+    }
+
+    function askGift() {
+      clearBox();
+      const box = document.getElementById('questionBox');
+      box.innerHTML = `
+        <p>Dic mihi quid optaveris 💌</p>
+      `;
+    }
+
+    function answerNo() {
+      clearBox();
+      const box = document.getElementById('questionBox');
+      box.innerHTML = `
+        <p><strong>Accessus negatus.</strong><br>
+        Clavis amissa. Tempus ad decisionem mutandam.</p>
+        <button class="open-btn" onclick="showImage()">Visne adhuc aperire?</button>
+      `;
+    }
+
+    function showImage() {
+      clearBox();
+      const box = document.getElementById('questionBox');
+      box.innerHTML = `
+        <p>Ecce imago secreta 🖼️</p>
+        <img src="https://ic.pics.livejournal.com/schneeaffe/68111522/126724/126724_300.jpg" alt="Secret Romantic Image" />
+      `;
+    }
+
+    function showFunny() {
+      clearBox();
+      const box = document.getElementById('questionBox');
+      box.innerHTML = `
+        <p>Ecce imago secreta 🔥😏 ... vel non 🤭</p>
+        <img src="https://lh3.googleusercontent.com/proxy/HkB9oBA1eGDuxvIJDa2dgpegx4gO_vqQkGD5a8SdfY9jFi1Lv37fL1zXi-HmV6eengwS2UGCuTJlvUN2qxzAzj_M_kXJsrQFi7gd-q_8HHXm6jFgK2mKBeNbvEAdSNCRmKhTB0eeUhC4kvZf95Edp_SZyL9eY7szN5g" alt="Funny Grandma" />
+      `;
+    }
+  </script>
+
+</body>
+</html>
